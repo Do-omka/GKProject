@@ -1,7 +1,121 @@
 @import 'style/_fonts';
+@import (reference) 'style/_mixins';
 
-#new {
+#new,
+#new .reset {
 	@import 'style/_reset';
 	@import 'style/_grid';
 	@import 'style/_styleguide';
+	
+	.header {
+		@mb: 20px;
+		padding-top: 15px;
+		border-bottom: 1px solid #E8EAED;
+		
+		&-content {
+			justify-content: center;
+		}
+		
+		&-item {
+			.c();
+			width: auto;
+			justify-content: center;
+			margin-bottom: @mb;
+		}
+		
+		&-contacts {
+			margin-bottom: -@mb;
+			
+			> * {
+				margin-bottom: @mb;
+			}
+			
+		}
+		
+		&-logo {
+			margin-bottom: -@mb;
+			
+			> * {
+				margin-bottom: @mb;
+			}
+		}
+		
+		&-address {
+			.r();
+			justify-content: center;
+			align-items: center;
+			
+			&::before {
+				.icon(24, location);
+			}
+		}
+	}
+	
+	.logo {
+		
+		&-img {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			
+			img {
+				margin: 0 auto;
+			}
+			
+			&::after {
+				align-self: stretch;
+				flex-shrink: 0;
+				flex-basis: 1px;
+				background: #404145;
+				margin-left: 15px;
+				margin-right: -15px;
+				
+				@media (@sm) {
+					content: '';
+				}
+			}
+		}
+		
+		&-text {
+			// .c();
+			// justify-content: center;
+			align-self: center;
+			text-align: center;
+			
+			
+			// p {
+			// 	margin-left: auto;
+			// 	margin-right: auto;
+			// }
+			
+			@media (@sm) {
+				text-align: left;
+			}
+		}
+	}
+	
+	.contacts {
+		justify-content: center;
+		
+		&-item {
+			display: flex;
+		}
+		
+		&-phone {
+			margin-bottom: 7px;
+			
+			&::before {
+				.icon(14, phone);
+			}
+		}
+		
+		&-mail {
+			&::before {
+				.icon(14, mail);
+			}
+		}
+	}
+	
+	
+	
 }
