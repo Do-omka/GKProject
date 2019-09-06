@@ -3,26 +3,36 @@
 @md: ~'min-width: 768px';
 @sm: ~'min-width: 576px';
 
-.unset {
+.unset() {
 	all: unset;
 	box-sizing: border-box;
 	display: block;
+	word-break: break-word;
 	-webkit-text-fill-color: currentColor; // safari: text color fix
 	text-size-adjust: 100%; // safari mobile: font-size fix
+}
+
+.unset {
+	.unset();
 	
 	&::before,
 	&::after {
-		&:extend(.unset);
+		.unset();
 		display: inherit;
 	}
-	&::placeholder:extend(.unset) {
+	&::placeholder {
+		.unset();
 		display: inherit;
 		-webkit-text-security: none; // webkit: password input placeholder fix
 	}
 }
 
-.reset:extend(.unset all) {
-	*:extend(.unset all){}
+.reset {
+	.unset();
+	
+	* {
+		.unset();
+	}
 		
 	a[href],
 	button,
