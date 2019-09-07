@@ -1,0 +1,232 @@
+
+a,
+.header a,
+.index_slider .item .text>div a.zayavka,
+.works_last-text_price>div,
+a.works_last_more .link,
+.uslugi_more .link,
+a.catalog_more .link,
+.index_obz_otz_akc .obz .more a,
+.index_obz_otz_akc .otz .more a,
+.index_contacts th,
+.uslugi_more .price>div>div,
+.header_table .form_search .btn:hover,
+.footer a:hover
+ {
+    color: #d02624;
+}
+
+.uslugi_more:hover .uslugi-text,
+.uslugi_more:hover .price,
+a.catalog_more:hover .uslugi-text 
+ { background: red;}
+
+
+
+.content_vopros { background: red; }
+
+
+
+/*Кнопки*/
+
+ .btn-default{ background: red; border: none; color: white;}
+ .btn-default:hover,  .btn-default:active,  .btn-default:focus{ background: #CC0000; color: white; }
+
+/*.Кнопки*/
+
+/*Шапка и меню*/
+
+.main_menu_gorizontal, .main_menu_gorizontal .dropdown-menu{
+    background: #242424 !important;
+}
+
+.dropdown-menu>li>a {
+    color: white;
+}
+
+
+
+@media (max-width: 768px) {
+/*.navbar-default { background:#F60808 !important; border-color: #F60808 !important;}*/
+}
+
+.header_table .contacts_cell .call_back span,
+.index_obz_otz_akc .obz .more a span,
+.index_obz_otz_akc .otz .more a span 
+ {
+    border-bottom: 1px red dotted;
+}
+
+/*Шапка и меню*/
+
+/* Слайдер ;*/
+
+.index_slider .item .text>div a:hover {
+    background: red;
+    border-color: red;
+    color: white;
+}
+
+.carousel-control.left, .carousel-control.right { 
+    font-size: 20px !important;
+    background: rgba(255,255,255, .7); 
+    color: #E00000;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    padding-top: 8px;
+    text-shadow: none !important;
+    }
+
+.carousel-control.left:hover, .carousel-control.right:hover { background: red; color: white; }
+
+
+.slick-dots li button:before {
+color: #C60000;
+}
+
+.slick-dots li.slick-active button:before {
+
+    color: #E00000;
+    -webkit-text-stroke-color: #FF4747;
+}
+
+/* .Слайдер ;*/
+
+
+/*Акции;*/
+
+.index_obz_otz_akc .akc .akc1 div.krug, .index_obz_otz_akc .akc .akc2 div.krug, .index_obz_otz_akc .akc .akc3 div.krug {
+    background: rgba(188,0,0, 0.7137254901960784);
+}
+
+.index_obz_otz_akc .akc a div.krug:hover{ 
+    background: rgba(188,0,0, 1.0);
+     }
+
+/*.Акции;*/
+
+/*Наши клиенты*/
+
+.index_clients_bg {
+    background: rgba(183,0,0, 0.8313725490196079);
+}
+
+/*.Наши клиенты*/
+
+/*Приемущества*/
+
+.priem_plitki_bg_color {
+    background: rgba(255,255,255, 0.78) !important;
+    color: #000;
+    padding: 40px 0 20px;
+}
+
+.priem_plitki_one>div {
+    border: 5px solid rgba(0,0,0, .25);
+}
+
+.priem_plitki * {
+    color: black;
+}
+
+a:hover .priem_plitki_one>div { background:  red; border-color: red;  transition: .5s; }
+
+/*.Приемущества*/
+
+.uslugi_more .link span,
+a.catalog_more .link span,
+a.catalog_more .link span,
+a.works_last_more .link span,
+.index_obz_otz_akc .obz .more  a,
+.index_obz_otz_akc .otz .more  a {background: url(images/index_arrow.png) right center no-repeat;}
+
+.uslugi_more .link span{padding-right: 25px; background: url(images/index_arrow.png) right center no-repeat; margin-left: 20px;}
+.uslugi_more:hover .link, a.catalog_more:hover .link, a.works_last_more:hover .link{ padding-top: 15px; color: white; background: url(images/index_box_hover.png) bottom right no-repeat; transition: 1s; height: 50px;}
+
+
+
+/*              приемущества по умолчанию           */
+
+
+.index_priemushestva.budget {
+    background: url(images/004-contract.svg) center center no-repeat;
+    height: 120px;
+}
+.index_priemushestva.fixprice {
+    background: url(images/003-money.svg) center center no-repeat;
+    height: 120px;
+}
+.index_priemushestva.photos {
+    background: url(images/002-technology.svg) center center no-repeat;
+    height: 120px;
+}
+.index_priemushestva.quickly {
+    background: url(images/001-badge.svg) center center no-repeat;
+    height: 120px;
+}
+.index_priemushestva.installation {
+    background: url(images/priem_stroy.png) center center no-repeat;
+    height: 120px;
+}
+.index_priemushestva.payment {
+    background: url(images/priem_stroy.png) center center no-repeat;
+    height: 120px;
+}
+
+
+
+.index_priemushestva.stroy {
+    background: url(images/priem_stroy.png) center center no-repeat;
+    height: 120px;
+
+}
+
+.index_priemushestva.project {
+    background: url(images/priem_project.png) center center no-repeat;
+    height: 120px;
+
+}
+
+.index_priemushestva.remont {
+    background: url(images/priem_remont.png) center center no-repeat;
+    height: 120px;
+
+}
+
+.index_priemushestva.catalog {
+    background: url(images/priem_catalog.png) center center no-repeat;
+    height: 120px;
+}
+/*              .приемущества по умолчанию          */
+
+
+.logo {
+    /*background: url(images/logo.png) no-repeat;*/
+    /*margin-right: 20px;*/
+    background-size: contain !important;
+}
+.logo>div {
+    min-width: 170px;
+    min-height: 50px;
+    display: inline-block;
+}
+
+.logo_footer {
+    background: url(images/logo.png) no-repeat;
+    -webkit-filter: grayscale(1) opacity(0.6);
+    background-size: contain;
+    width: 120px;
+    height: 50px;
+    margin-bottom: 10px;
+    /*margin-right: 20px;*/
+}
+
+
+.footer .root-item-selected, #main_menu .root-item-selected {
+    color: red;
+}
+.main_menu_gorizontal .nav-pills>li.active>a, .main_menu_gorizontal .nav-pills>li.active>a:hover, .main_menu_gorizontal .nav-pills>li.active>a:focus, .main_menu_gorizontal .nav-pills>li>a.root-item-selected
+{
+    color: white;
+}
