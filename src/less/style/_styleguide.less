@@ -31,3 +31,27 @@ body {
 	background: #FA3F48;
 	border-radius: 4px;
 }
+
+.socials {
+	display: flex;
+	align-items: stretch;
+	margin: 0 -7.5px;
+	
+	&-item {
+		> * {
+			font-size: 0;
+			display: flex;
+			background: no-repeat content-box center / contain;
+			margin: 0 7.5px;
+		}
+	}
+	
+	&-telegram::before {
+		.icon(25, telegram);
+	}
+	
+	&-instagram::before {
+		.icon(25, instagram);
+	}
+}
+
