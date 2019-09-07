@@ -97,7 +97,11 @@
 	}
 	
 	.contacts {
-		justify-content: space-between;
+		justify-content: center;
+		
+		@media (@sm) {
+			justify-content: space-between;
+		}
 		
 		&-item {
 			display: flex;
