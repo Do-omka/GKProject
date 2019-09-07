@@ -60,3 +60,41 @@ body {
 	}
 }
 
+.contacts {
+	.h2();
+	margin-top: -7px;
+	margin-bottom: -7px;
+	
+	&-item {
+		> * {
+			display: flex;
+			padding-top: 7px;
+			padding-bottom: 7px;
+		}
+	}
+	
+	&-phone {
+		&::before {
+			.icon(14, phone);
+			margin-right: 7px;
+		}
+	}
+	
+	&-mail {
+		&::before {
+			.icon(14, mail);
+			margin-right: 7px;
+		}
+	}
+}
+
+.address {
+	.r();
+	justify-content: center;
+	align-items: center;
+	
+	&::before {
+		.icon(24, location);
+		margin-right: 7px;
+	}
+}

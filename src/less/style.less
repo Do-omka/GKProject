@@ -25,23 +25,26 @@
 		}
 		
 		&-contacts {
-			margin-bottom: -@mb;
+			.row();
+			justify-content: center;
 			
-			> * {
-				margin-bottom: @mb;
+			@media (@sm) {
+				justify-content: space-between;
 			}
 			
+			.contacts {
+				.col-auto();
+			}
+		}
+		
+		&-recall {
+			.c();
+			.col-auto();
+			flex-grow: 1;
 		}
 		
 		&-address {
-			.r();
-			justify-content: center;
-			align-items: center;
-			
-			&::before {
-				.icon(24, location);
-				margin-right: 8px;
-			}
+			.p14();
 		}
 	}
 	
@@ -113,10 +116,6 @@
 			}
 		}
 		
-		&-mail {
-			&::before {
-				.icon(14, mail);
-				margin-right: 8px;
 			}
 		}
 	}
