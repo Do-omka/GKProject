@@ -1,0 +1,146 @@
+.main_menu {
+	position: relative;
+	
+	&::before {
+		pointer-events: none;
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 111111 !important;
+		box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+	}
+	
+	&-nav {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+	}
+	
+	&_gorizontal {
+		height: auto;
+	}
+	
+	.nav {
+		margin-left: -20px;
+		margin-right: -20px;
+		
+		&-socials {
+			display: flex;
+			align-items: center;
+			
+			.socials {
+				display: flex;
+				align-items: stretch;
+				margin: 0 -7.5px;
+				
+				> * {
+					box-sizing: padding-box;
+					height: 100%;
+					background: no-repeat content-box center / contain;
+					margin: 0 7.5px;
+				}
+				
+				&-telegram {
+					.icon(25, telegram);
+				}
+				
+				&-instagram {
+					.icon(25, instagram);
+				}
+			}
+		}
+		
+		> .dropdown {
+			padding: 0 !important;
+			height: auto;
+			
+			> a {
+				display: block;
+				padding: 15px 20px !important;
+			}
+			
+			&:hover > a {
+				color: #F2323F;
+				font-weight: 600;
+			}
+			> .dropdown-menu > li:first-child {
+				border-top: 2px solid #F2323F !important;
+			}
+		}
+	}
+}
+
+.dropdown-menu {
+	box-shadow: unset;
+}
+.main_menu_gorizontal, .main_menu_gorizontal .dropdown-menu {
+	color: #2C2D30 !important;
+	background: #fff !important;
+}
+
+.main_menu_gorizontal li>a {
+	text-transform: none;
+	.h2();
+	font-weight: normal;
+	color: #2C2D30;
+}
+
+.nav-justified>li {
+	width: auto;
+}
+
+.main_menu_gorizontal .nav-pills>li {
+	background: unset;
+}
+
+.dropdown-menu li {
+	padding: 0;
+	border: none;
+}
+
+.dropdown-menu>li>a {
+	padding: 15px 20px !important;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0s all;
+}
+
+.dropdown-submenu {
+	position: static;
+	
+	.dropdown-menu {
+		bottom: 0;
+	}
+}
+
+.dropdown-submenu>a:after {
+	.icon(10, arrow);
+	margin: 0;
+	margin-right: -5px;
+	margin-left: 15px;
+	background-repeat: no-repeat;
+}
+
+.nav-pills .dropdown-menu {
+	top: 100% !important;
+	margin: 0;
+}
+
+.dropdown-menu {
+	padding: 0;
+}
+
+.dropdown-menu .dropdown-menu {
+	top: 0 !important;
+	border-left: 1px solid #E8EAED !important;
+}
+
+.dropdown-menu li:hover, .dropdown-menu li a:hover {
+	background: rgba(126, 128, 133, 0.08);
+	font-weight: 600;
+}
