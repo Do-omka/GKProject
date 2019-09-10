@@ -241,7 +241,6 @@
 			background: url('../img/topBanner.png') center / cover;
 		}
 		
-		
 		.ch1 {
 			margin-bottom: 10px;
 		}
@@ -262,6 +261,125 @@
 			> p::before {
 				content: '• ';
 				
+			}
+		}
+	}
+	
+	.services {
+		margin-bottom: -15px;
+		
+		&-section {
+			padding: 100px 0 55px;
+		}
+		
+		&-header {
+			.r();
+			justify-content: space-between;
+			margin: -15px;
+			margin-bottom: 25px;
+			
+			> * {
+				padding: 15px;
+			}
+		}
+		
+		&-item {
+			.c();
+			margin-bottom: 15px;
+		}
+		
+		&-headerRemark {
+			display: flex;
+			color: #F2323F;
+			font-family: Inter;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 13px;
+			line-height: 1.23;
+			letter-spacing: 0.24px;
+			text-decoration-line: underline;
+			text-transform: uppercase;
+			
+			&::before {
+				.icon(15, like);
+				margin-right: 7px;
+			}
+		}
+	}
+	
+	.servicesPromo {
+		flex-grow: 1;
+		.c();
+		
+		&-body {
+			position: relative;
+			padding: 30px;
+			padding-left: 0;
+			color: #fff;
+			background: #F2323F;
+			box-shadow: 0px 6px 16px rgba(255, 5, 5, 0.2), 0px 0px 2px rgba(243, 12, 12, 0.06);
+			border-radius: 0 10px 10px 0;
+			// margin-bottom: 64px;
+			
+			&::before {
+				content: '';
+				position: absolute;
+				width: 1920px;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				background: inherit;
+				z-index: -1;
+				border-radius: 0 10px 10px 0;
+			}
+		}
+		
+		&-footer {
+			display: flex;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			margin-top: auto;
+			margin-bottom: auto;
+			
+			&::before {
+				flex-shrink: 0;
+				.icon(33, pdf);
+				margin-right: 12px;
+			}
+			
+			.h3 {
+				font-weight: 600;
+				margin-bottom: 12px;
+			}
+			
+			.p14 {
+				margin-bottom: 14px;
+			}
+		}
+		
+	}
+	
+	.service {
+		flex-grow: 1;
+		background: #FFFFFF;
+		box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(0, 0, 0, 0.06);
+		border-radius: 10px;
+		overflow: hidden;
+		
+		&-img {
+			.ratioimg(57, cover);
+		}
+		
+		&-body {
+			padding: 24px;
+		}
+		
+		&-item {
+			> p {
+				&::before {
+					content: '• ';
+					
+				}
 			}
 		}
 	}
