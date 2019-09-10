@@ -453,5 +453,52 @@
 		}
 	}
 	
-	
+	.midBanner {
+		color: #fff;
+		padding: 65px 0 100px;
+		
+		&-section {
+			position: relative;
+			background: url('../img/midBanner.png') content-box center / cover;
+			
+			@media (@xl) {
+				&--book {
+					padding: 70px 0 65px;
+					
+					.midBanner-img {
+						background: url('../img/midBanner-book.png') no-repeat center / contain;
+					}
+				}
+				
+				&--man {
+					padding-top: 120px;
+					
+					.midBanner-img {
+						background: url('../img/midBanner-man.png') no-repeat center bottom / contain;
+					}
+				}
+			}
+		}
+		
+		&-img {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			
+			@media (@xl) {
+				display: block;
+			}
+		}
+		
+		.h5 {
+			font-weight: normal;
+			margin-bottom: 32px;
+		}
+		
+		.h8 {
+			margin-bottom: 24px;
+		}
+	}
 }
