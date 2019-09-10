@@ -206,29 +206,29 @@
 	}
 	
 	.recallForm {
-		justify-content: space-between;
 		margin-bottom: -7px;
 		
-		> * {
+		&-item {
 			margin-bottom: 7px;
 		}
 		
 		&-form {
-			form {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				margin-left: -7.5px;
-				margin-right: -7.5px;
-				
-				> * {
-					padding-left: 7.5px;
-					padding-right: 7.5px;
-				}
-				
-				.btn {
-					width: 100%;
-				}
+			display: flex;
+			justify-content: space-between;
+			margin-left: -7.5px;
+			margin-right: -7.5px;
+			
+			> * {
+				padding-left: 7.5px;
+				padding-right: 7.5px;
+			}
+		}
+		
+		&-item {
+			.c();
+			
+			> * {
+				flex-grow: 1;
 			}
 		}
 	}
