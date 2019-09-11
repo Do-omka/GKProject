@@ -253,3 +253,48 @@ input {
 	box-sizing: border-box;
 	border-radius: 4px;
 }
+
+.slider {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: -30px;
+	
+	@media (@sm) {
+		padding: 0 15px;
+		margin: 0 -15px -30px;
+	}
+	
+	&-slides {
+		display: flex;
+	}
+	
+	&-slide {
+		.c();
+		margin-bottom: 30px;
+		flex-shrink: 0;
+	}
+	
+	&-controls {
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		transform: translateY(-50%);
+		z-index: 1;
+	}
+	
+	&-control {
+		padding: 8px;
+		.icon(30, slider-arrow);
+		background-origin: content-box;
+		background-color: #F2323F;
+		border-radius: 50%;
+		
+		&._next {
+			transform: rotate(180deg);
+		}
+	}
+	
+}
