@@ -780,5 +780,86 @@
 		}
 	}
 	
+	.mapContacts {
+		display: flex;
+		
+		@media (@xl) {
+			&::before {
+				content: '';
+				flex-basis: calc(100% / 12);
+			}
+		}
+		
+		&-section {
+			.c();
+			position: relative;
+		}
+		
+		&-map {
+			background: grey;
+			height: 450px;
+			order: 1;
+			z-index: -1;
+			
+			@media (@xl) {
+				position: absolute;
+				height: auto;
+				top: 60px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+		
+		&-content {
+			flex: 1 1 350px;
+			max-width: 350px;
+			padding: 30px;
+			padding-bottom: 50px;
+			color: #fff;
+			background: #F2323F;
+			box-shadow: 0px 6px 16px rgba(255, 5, 5, 0.2), 0px 0px 2px rgba(243, 12, 12, 0.06);
+			border-radius: 10px 10px 0 0;
+			overflow: hidden;
+		}
+		
+		&-list {
+			margin-bottom: 48px;
+		}
+		
+		&-item {
+			margin-bottom: 32px;
+		}
+		
+		.h8 {
+			text-align: center;
+			margin-bottom: 36px;
+			
+			@media (@xl) {
+				margin-bottom: 48px;
+			}
+		}
+		
+		.ch2 {
+			opacity: 0.7;
+			margin-bottom: 12px;
+		}
+		
+		.recallForm {
+			&-form {
+				flex-direction: column;
+			}
+			
+			&-item {
+				max-width: unset;
+			}
+		}
+		
+		.btn {
+			background: #fff;
+			color: #F2323F;
+		}
+	}
+	
 	
 }
