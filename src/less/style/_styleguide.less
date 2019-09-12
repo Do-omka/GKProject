@@ -144,9 +144,13 @@ body {
 	font-family: Inter;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 21px;
-	line-height: 32px;
+	font-size: 19px;
+	line-height: 1.52;
 	letter-spacing: -0.24px;
+	
+	@media (@xl) {
+		font-size: 21px;
+	}
 }
 
 .btn {
@@ -286,7 +290,6 @@ input {
 	
 	&-slide {
 		.c();
-		margin-bottom: 30px;
 		flex-shrink: 0;
 	}
 	
