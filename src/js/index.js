@@ -1,3 +1,8 @@
+function findAncestor (el, cls) {
+	while ((el = el.parentElement) && !el.classList.contains(cls));
+	return el
+}
+
 document.addEventListener('DOMContentLoaded', (e)=> {
 	
 	if (document.querySelector('.ourTeam-slider')) {
@@ -71,6 +76,25 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 				onlyInViewport: true
 			}
 		});
+	}
+	
+	let nextSlide = function(e) {
+		let dom = findAncestor(e.target, 'slide')
+		dom.classList.toggle('active')
+		
+		if (dom.nextElementSibling) {
+			dom.nextElementSibling.classList.toggle('active')
+		} else {
+			dom.parentElement.firstElementChild.classList.toggle('active')
+		}
+	}
+	
+	if (document.querySelectorAll('[data-js="nextSlide"]')) {
+		let slides = document.querySelectorAll('[data-js="nextSlide"]')
+		
+		for (let i = 0; i < slides.length; i++) {
+			slides[i].addEventListener('click', nextSlide)
+		}
 	}
 	
 })
