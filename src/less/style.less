@@ -464,30 +464,48 @@
 		
 		&-section {
 			position: relative;
+			overflow: hidden;
 			background: url('../img/midBanner.png') content-box center / cover;
 			
-			@media (@xl) {
-				&--book {
+			&--book {
+				display: none;
+				
+				@media (@xl) {
+					display: block;
 					padding: 70px 0 65px;
 					
 					.midBanner-img {
 						background: url('../img/midBanner-book.png') no-repeat center / contain;
 					}
 				}
+			}
+			
+			&--man {
+				padding-top: 120px;
 				
-				&--man {
-					padding-top: 120px;
+				.midBanner-img {
+					display: block;
+					background: url('../img/midBanner-man.png') no-repeat center bottom / auto 100%;
 					
-					.midBanner-img {
-						background: url('../img/midBanner-man.png') no-repeat center bottom / contain;
+					@media (max-width: 1199px) {
+						transform: translateX(35%);
+						width: 492px;
+					}
+				}
+				
+				.h8 {
+					max-width: 75%;
+					
+					@media (@sm) {
+						max-width: none;
 					}
 				}
 			}
 		}
 		
 		&-img {
-			display: none;
 			position: absolute;
+			order: 1;
 			top: 0;
 			right: 0;
 			bottom: 0;
