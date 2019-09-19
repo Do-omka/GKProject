@@ -188,7 +188,11 @@ body {
 	margin-bottom: 25px;
 	
 	> * {
-		padding: 15px;
+		padding: 4px;
+		
+		@media (@sm) {
+			padding: 15px;
+		}
 	}
 }
 
@@ -254,6 +258,7 @@ body {
 
 .remark {
 	display: flex;
+	order: -1;
 	color: #F2323F;
 	font-family: Inter;
 	font-style: normal;
@@ -263,6 +268,10 @@ body {
 	letter-spacing: 0.24px;
 	text-decoration-line: underline;
 	text-transform: uppercase;
+	
+	@media (@sm) {
+		order: unset;
+	}
 }
 
 input {
