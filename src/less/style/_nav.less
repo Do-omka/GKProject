@@ -1,5 +1,13 @@
 @mm: @lg;
 
+.header {
+	display: none;
+	
+	@media (@mm) {
+		display: block;
+	}
+}
+
 .main_menu {
 	position: relative;
 	
@@ -49,6 +57,96 @@
 				white-space: normal;
 			}
 		}
+		
+		.navbar {
+			
+			&-toggle {
+				background: no-repeat;
+				.icon(25, menu-open);
+				font-size: 0;
+			}
+			
+			&-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 15px;
+				
+				&::before,
+				&::after {
+					content: none;
+				}
+				
+				.nav-socials {
+					padding-left: 15px;
+				}
+				
+				.logo {
+					&-img {
+						&::after {
+							content: none;
+						}
+					}
+					&-text {
+						display: none;
+					}
+				}
+			}
+			
+			&-footer {
+				padding: 24px 0 8px;
+			}
+			
+			&-footerItem {
+				text-align: left;
+				margin-bottom: 24px;
+			}
+			
+			&-contacts {
+				display: flex;
+				align-items: center;
+				margin: -15px -15px (-15px + 18px);
+				
+				> * {
+					padding: 15px;
+				}
+				
+				.contacts {
+					&-item {
+						padding: 0;
+						
+						> * {
+							padding: 4px 0;
+							
+							&::before {
+								content: none;
+							}
+						}
+					}
+				}
+			}
+			
+			&-recall {
+				.btn {
+					font-size: 12px;
+				}
+			}
+			
+			.address {
+				justify-content: flex-start;
+			}
+			
+			&-socials {
+				.socials {
+					margin: 0 -4px;
+					&-item {
+						a {
+							margin: 0 4px;
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	&-nav {
@@ -80,6 +178,7 @@
 				color: #F2323F;
 				font-weight: 600;
 			}
+			
 			> .dropdown-menu > li:first-child {
 				border-top: 2px solid #F2323F !important;
 			}
@@ -176,18 +275,13 @@
 	}
 }
 
-.menu_mobile .navbar-header button {
-	.h2();
-	color: unset;
-}
-
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
 	background: unset;
 	transition: 0s all;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-	background: unset !important;
+	background-color: unset !important;
 	color: #F2323F;
 }
 
@@ -205,20 +299,6 @@
 	font-weight: 400;
 	border-bottom: 1px solid rgb(232, 234, 237);
 	position: static !important;
-}
-
-.menu_mobile .navbar-header {
-	display: flex;
-	justify-content: space-between;
-	
-	&::before,
-	&::after {
-		content: none;
-	}
-	
-	.nav-socials {
-		padding-left: 15px;
-	}
 }
 
 .navbar-collapse {

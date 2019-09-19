@@ -1,13 +1,13 @@
 <div class="main_menu main_menu-mobile no_print">
 	<nav class="navbar navbar-default menu_mobile text-right" role="navigation"> 
-		<div class="navbar-header">
-			<div class='nav-socials reset'>
-				//= socials.html
-			</div>
-			
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-				<i class="fa fa-bars"></i> Меню
-			</button>
+		<div class='container'>
+			<header class="navbar-header">
+				//= logo.html
+				
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+					<i></i> Меню
+				</button>
+			</header>
 		</div>
 		<div class="navbar-collapse collapse" id="menu" style="height: 1px;">
 			<ul class="nav navbar-nav">
@@ -328,6 +328,24 @@
 					</ul>
 				</li>
 			</ul>
+			
+			<footer class='navbar-footer reset'>
+				<div class='navbar-footerItem'>
+					<h3 class='ch3'>Контакты</h3>
+					<div class='navbar-contacts'>
+						//= contacts.html
+						<div class='navbar-recall'>
+							<button type='button' data-toggle='modal' data-target='#callback' class='btn'>Заказать звонок</button>
+						</div>
+					</div>
+					//= address.html
+				</div>
+				<div class='navbar-socials navbar-footerItem'>
+					<h3 class='ch3'>соц. сети</h3>
+					//= socials.html
+				</div>
+			</footer>
+			
 		</div>
-	</nav>	
+	</nav>
 </div>
