@@ -275,6 +275,22 @@
 		&-item {
 			.c();
 			margin-bottom: 15px;
+			
+			&:nth-child(n + 4) {
+				display: none;
+				
+				@media (@sm) {
+					display: flex;
+				}
+			}
+			
+			&:first-child {
+				order: 1;
+				
+				@media (@sm) {
+					order: unset;
+				}
+			}
 		}
 		
 		.remark {
@@ -291,6 +307,7 @@
 		
 		&-body {
 			position: relative;
+			order: 1;
 			padding: 30px;
 			padding-left: 0;
 			color: #fff;
@@ -310,6 +327,10 @@
 				z-index: -1;
 				border-radius: 0 10px 10px 0;
 			}
+			
+			@media (@sm) {
+				order: unset;
+			}
 		}
 		
 		&-footer {
@@ -321,8 +342,14 @@
 			
 			&::before {
 				flex-shrink: 0;
-				.icon(33, pdf);
+				.icon(25, pdf);
 				margin-right: 12px;
+				
+				@media (@sm) {
+					width: 33px;
+					height: 33px;
+					margin-right: 7px;
+				}
 			}
 			
 			.h3 {
