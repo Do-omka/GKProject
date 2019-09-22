@@ -320,6 +320,73 @@
 	.logo-img img {
 		max-width: 124px;
 	}
+	
+	.navbar {
+		&.sub {
+			.navbar-header {
+				align-items: center;
+				display: none;
+				// height: 0;
+				// padding: 0;
+				// overflow: hidden;
+				// transition: .2s all;
+			}
+			
+			.nav {
+				> li:not(.open) {
+					> .dropdown-toggle {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	
+	.dropdown {
+		
+		&-menu {
+			display: block;
+		}
+		
+		&.open {
+			> .dropdown-toggle {
+				> div {
+					color: #9FA1A6;
+					padding: 20px 15-7px;
+					
+					&::after {
+						width: 15px;
+						height: 15px;
+						order: -1;
+						transform: rotate(180deg);
+						background-position: right;
+					}
+					
+					.navbar-toggle {
+						margin: -20px -15px;
+						padding: 20px 15px;
+					}
+				}
+			}
+		}
+		
+		&:not(.open) {
+			> .dropdown-menu > li:not(.open) {
+				display: none;
+			}
+			
+			> .dropdown-toggle {
+				.navbar-toggle {
+					display: none;
+				}
+			}
+		}
+	}
+	
+	.dropdown-menu {
+		border-left: none !important;
+	}
+	
 	.navbar-collapse {
 		padding: 0;
 	}

@@ -97,4 +97,37 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 		}
 	}
 	
+	if (document.querySelector('#new .main_menu-mobile .navbar')) {
+		let navbar = document.querySelector('#new .main_menu-mobile .navbar')
+		let togs = navbar.querySelectorAll('.dropdown-toggle')
+		let suptogs = navbar.querySelectorAll('.nav > .dropdown > .dropdown-toggle')
+		
+		for (let i = 0; i < togs.length; i++) {
+			togs[i].addEventListener('click', (e)=> {
+				if (!e.currentTarget.parentElement.classList.contains('open')) {
+					navbar.classList.add('sub')
+				}
+			})
+		}
+		
+		for (let i = 0; i < suptogs.length; i++) {
+			suptogs[i].addEventListener('click', (e)=> {
+				if (findAncestor(suptogs[i], 'dropdown').classList.contains('open')) {
+					navbar.classList.remove('sub')
+				}
+			})
+		}
+		
+		let navtogs = document.querySelectorAll('#new .main_menu-mobile .navbar-toggle')
+		for (let i = 0; i < navtogs.length; i++) {
+			navtogs[i].addEventListener('click', (e)=> {
+				navbar.classList.remove('sub')
+			})
+		}
+	}
+	
+	$('.dropdown-menu .dropdown').on('hide.bs.dropdown', (e)=> {
+		findAncestor(e.target, 'dropdown').classList.add('open')
+	})
+	
 })
