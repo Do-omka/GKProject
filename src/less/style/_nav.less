@@ -61,8 +61,19 @@
 		.navbar {
 			
 			&-toggle {
-				.icon(25, menu-open);
+				.reset;
 				font-size: 0;
+				line-height: 0;
+				cursor: pointer;
+				
+				i {
+					display: block;
+					.icon(25, menu-open);
+				}
+				
+				&[aria-expanded="true"] i {
+					background-image: svg-load('../img/menu-close.svg')
+				}
 			}
 			
 			&-header {
