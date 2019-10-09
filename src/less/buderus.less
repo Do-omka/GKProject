@@ -1,0 +1,115 @@
+@c: #0060AF;
+
+#new,
+#new .reset {
+	@import (reference) 'style/_alt';
+	
+	.topBanner {
+		
+		@media (@lg) {
+			max-width: 500px;
+		}
+		
+		@media (@xl) {
+			max-width: 600px;
+		}
+		
+		&-section {
+			position: relative;
+			background-image: url('../img/topBanner-buderus.png');
+			
+			&::after {
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				background: url(../img/topBanner-buderus2.png) center / cover;
+				pointer-events: none;
+				
+				@media (@lg) {
+					content: '';
+				}
+			}
+		}
+	}
+	
+	.servicesPromo {
+		
+		&-body {
+			background: @c;
+			
+			.btn.versa {
+				color: #000;
+			}
+		}
+	}
+	
+	.mapContacts {
+		
+		&-content {
+			background: @c;
+		}
+		
+		.btn {
+			background: #F2323F;
+			color: #fff;
+		}
+	}
+	
+	.loicences {
+		
+		&-section {
+			background: #F4F8FC;
+		}
+	}
+	
+	.midBanner {
+		
+		&-section {
+			
+			&--book {
+				background: url('../img/midBanner-burderus.png') content-box center / cover;
+			}
+		}
+	}
+	
+	.portfolio {
+		
+		&-tab {
+			background: @c;
+		}
+		
+		&-priceForm {
+			background: @c;
+			
+			.btn.versa {
+				color: @c;
+				border-color: @c;
+			}
+		}
+		
+		.nextSlide {
+			color: @c;
+			border-color: @c;
+			
+			.refill(redArrow, @c);
+		}
+		
+		&-property {
+			
+			&._house {
+				.refill(house, @c);
+			}
+			&._stairs {
+				.refill(stairs, @c);
+			}
+			&._clock {
+				.refill(clock, @c);
+			}
+			&._face {
+				.refill(face, @c);
+			}
+		}
+	}
+}

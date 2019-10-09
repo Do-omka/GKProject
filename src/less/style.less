@@ -249,6 +249,10 @@
 			margin-bottom: 10px;
 		}
 		
+		.h3 {
+			margin-bottom: 24px;
+		}
+		
 		&-pros {
 			position: relative;
 			overflow: hidden;
@@ -1030,7 +1034,8 @@
 				border-radius: 4px;
 				margin-top: 7px;
 				
-				&::after {
+				&::before {
+					order: 1;
 					.icon(14, redArrow);
 					margin-left: 7px;
 				}
@@ -1058,21 +1063,21 @@
 			.ch2();
 			margin-bottom: 6px;
 			
+			&::before {
+				margin-bottom: 12px;
+			}
+			
 			&._house::before {
 				.icon(25, house);
-				margin-bottom: 12px;
 			}
 			&._stairs::before {
 				.icon(25, stairs);
-				margin-bottom: 12px;
 			}
 			&._clock::before {
 				.icon(25, clock);
-				margin-bottom: 12px;
 			}
 			&._face::before {
 				.icon(25, face);
-				margin-bottom: 12px;
 			}
 		}
 		

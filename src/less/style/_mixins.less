@@ -27,3 +27,17 @@
 		object-position: center;
 	}
 }
+
+.refill(@name, @fill) {
+	@svg-load refill url('../img/@{name}.svg') {
+		fill: @fill;
+		
+		* {
+			fill: inherit;
+		}
+	}
+	
+	&::before {
+		background-image: svg-inline(refill);
+	}
+}
