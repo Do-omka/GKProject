@@ -112,4 +112,38 @@
 			}
 		}
 	}
+	
+	.appBanner {
+		color: #fff;
+		padding: 100px 0;
+		
+		&-section {
+			position: relative;
+			padding-top: 134px;
+			background: @c content-box;
+			margin-bottom: 105px;
+		}
+		
+		&-img {
+			position: absolute;
+			order: 1;
+			display: none;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			
+			@media (@xl) {
+				display: block;
+				background: url('../img/appBanner.png') no-repeat bottom right / contain;
+			}
+		}
+		
+		.h9 {
+			
+			@media (@xl) {
+				margin-bottom: 32px;
+			}
+		}
+	}
+	
 }
