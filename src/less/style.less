@@ -1143,11 +1143,16 @@
 		
 		&-btn {
 			display: block;
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: cover;
+			background: no-repeat center / cover;
 			width: 255px;
 			height: 71px;
+			
+			&._googleplay {
+				background-image: svg-load('../img/googleplay.svg');
+			}
+			&._appstore {
+				background-image: svg-load('../img/appstore.svg');
+			}
 		}
 	}
 	
