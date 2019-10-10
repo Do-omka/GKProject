@@ -362,4 +362,80 @@
 			}
 		}
 	}
+	
+	.boilers {
+		padding-top: 12px;
+		// counter-reset: i;
+		
+		&-section {
+			padding-bottom: 48px;
+		}
+		
+		> nav {
+			overflow: hidden;
+		}
+		
+		.radio-unchecked(@n) when (@n > 0) {
+			#boilers-radio@{n}:not(:checked) {
+				~ nav .boilers-label:nth-child(@{n}) label {
+					color: #000;
+					border-color: transparent;
+				}
+				
+				~ .boilers-content .boilers-list:nth-child(@{n}) {
+					display: none;
+				}
+				
+			}
+			.radio-unchecked(@n - 1);
+		}
+		.radio-unchecked(4);
+		
+		&-label {
+			border-bottom: 2px solid #E8EAED;
+			
+			label {
+				display: block;
+				padding: 20px 0;
+				text-align: center;
+				color: @c;
+				border-bottom: 2px solid #0060AF;
+				margin-bottom: -2px;
+			}
+		}
+		
+		&-list {
+			padding-top: 30px;
+			margin-bottom: -30px;
+		}
+		
+		&-item {
+			.c();
+			margin-bottom: 30px;
+		}
+		
+		&-card {
+			flex-grow: 1;
+			background: #FFFFFF;
+			box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(0, 0, 0, 0.06);
+			border-radius: 10px;
+			
+			> header {
+				padding: 15px;
+				padding-bottom: 20px;
+			}
+		}
+		
+		&-img {
+			.ratioimg(110, contain);
+		}
+		
+		&-body {
+			padding: 0 15px 30px;
+		}
+		
+		.h2 {
+			margin-bottom: 12px;
+		}
+	}
 }
