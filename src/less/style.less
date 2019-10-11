@@ -206,6 +206,7 @@
 	}
 	
 	.recallForm {
+		justify-content: space-between;
 		margin-bottom: -7px;
 		
 		&-item {
@@ -214,7 +215,6 @@
 		
 		&-form {
 			display: flex;
-			justify-content: space-between;
 			margin-left: -7.5px;
 			margin-right: -7.5px;
 			
@@ -229,6 +229,16 @@
 			
 			> * {
 				flex-grow: 1;
+			}
+		}
+		
+		&-text {
+			br {
+				display: none;
+				
+				@media (@sm) {
+					display: block;
+				}
 			}
 		}
 	}
