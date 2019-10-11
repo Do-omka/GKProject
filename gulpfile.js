@@ -122,6 +122,13 @@ function min_img() {
 		.pipe(gulp.dest('docs/img'))
 }
 
+function copy() {
+	return gulp.src(['dev/js/*', 'dev/css/*', 'dev/*.html'], {
+		'base': 'dev'
+	})
+	.pipe(gulp.dest('docs'))
+}
+
 // watch
 function watch_html() {
 	return gulp.watch(['src/*.html', 'src/tpl/*.html'], html)
@@ -149,4 +156,7 @@ function serve() {
 gulp.task('default', gulp.parallel(serve, watch_html, watch_css, watch_js))
 gulp.task('try', gulp.parallel(html, css, js))
 
-gulp.task('build', gulp.parallel(min_html, min_css, min_js, min_img))
+gulp.task('build', gulp.parallel(
+	// min_html, min_css, min_js,
+	copy,
+	min_img))
